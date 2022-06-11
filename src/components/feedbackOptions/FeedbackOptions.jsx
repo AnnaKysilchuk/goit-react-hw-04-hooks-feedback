@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import style from './FeedbackOptions.module.css';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
+export const FeedbackOptions = ({ onLeaveFeedback }) => (
     <ul className={style.feedbackCategories}>
         <li className={style.feedbackCategoriesItem}>
             <button
                 type="button"
-                onClick={() => onLeaveFeedback(options.find(option => option === 'good'))}
+                onClick={() => onLeaveFeedback('good')}
                 className={style.feedbackBtn}
             >
                 Good
@@ -15,7 +15,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
         <li className={style.feedbackCategoriesItem}>
             <button
                 type="button"
-                onClick={() => onLeaveFeedback(options.find(option => option === 'neutral'))}
+                onClick={() => onLeaveFeedback('neutral')}
                 className={style.feedbackBtn}
             >
                 Neutral
@@ -24,7 +24,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
         <li className={style.feedbackCategoriesItem}>
             <button
                 type="button"
-                onClick={() => onLeaveFeedback(options.find(option => option === 'bad'))}
+                onClick={() => onLeaveFeedback('bad')}
                 className={style.feedbackBtn}
             >
                 Bad
